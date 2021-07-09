@@ -45,17 +45,13 @@ if __name__ == "__main__":
     print(f'List of all possible words made from: {word}')
     print(pw)
     print('Ok, check if there are some anagrams...')
-    for i in range(2, 6):
-        wl = list(itertools.permutations(pw, r=i))
-        for l in wl:
+    for i in range(2, 10):
+        for l in itertools.permutations(pw, r=i):
             aw = ''.join(l)
             # print(f'Check: {aw}')
             x = check(word, aw)
             if x:
                 print(l)
-
-quit(0)
-
 
 
 
